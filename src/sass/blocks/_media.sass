@@ -182,6 +182,8 @@
 	.reasons
 		&_descr
 			width: 200px
+	.pageup
+		display: unset
 		
 @media screen and ( max-width: 575px)
 	nav
@@ -205,6 +207,11 @@
 			font-size: 9px
 			&:hover
 				@include bgi_birch
+			&_submit
+				margin: 20px 0 0 0
+				width: 100%
+				height: 45px
+				font-size: 13px
 	.promo
 		min-height: 400px
 		padding: 93px 0 35px 0
@@ -223,8 +230,9 @@
 			display: none
 		&_btn
 			width: 216px
-			height: 56px
+			height: 50px
 			margin-top: 72px
+			font-size: 15px
 			&:hover
 				@include bgi_birch
 	.menu
@@ -309,5 +317,30 @@
 			&:hover
 				color: none 
 				background-color: $black-color
+
+	.overlay
+		.modal
+			min-width: 300px
+			padding: 25px 20px 20px 20px
+			&_descr
+				font-size: 13px
+			&_subtitle
+				font-size: 16px
+			&_close
+				top: 5px
+				right: 5px
+				font-size: 35px
+
+	.feed-form
+		margin-top: 5px
+		input
+			height: 45px
+		.error
+			font-size: 13px
+
+	.pageup
+		width: 35px
+		height: 35px
+
 
 	

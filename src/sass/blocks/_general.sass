@@ -26,6 +26,10 @@ nav
     transition: 0.5s all
     &:hover
       color: $birch-color
+  span
+    &:hover
+      cursor: pointer
+      text-decoration: underline
   &_item
     border-right: 2px dotted black
     padding-right: 28px
@@ -80,6 +84,12 @@ nav
     font-weight: 400
     text-transform: uppercase
     +btn_hover
+    &_submit 
+      width: 100%
+      height: 50px
+    &:focus
+      outline: none
+
 
 .promo
   min-height: 800px
@@ -124,6 +134,11 @@ nav
     font-weight: 400
     text-transform: uppercase
     +btn_hover
+    &_submit 
+      width: 100%
+      height: 50px
+    &:focus
+      outline: none
 
 .reasons
   padding: 71px 0 65px 0
@@ -189,7 +204,7 @@ nav
     margin-top: 32px
   &_item
     position: relative
-    width: 320px
+    max-width: 320px
     height: 280px
     margin: 0 auto
     margin-bottom: 19px
@@ -352,6 +367,7 @@ nav
     position: absolute
     right: 23px
     top: 50px
+    cursor: pointer
   &_social
     display: flex
     justify-content: space-between
@@ -430,3 +446,83 @@ nav
 
 .xs-visible
   display: none
+
+.overlay
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  background-color: rgba(0, 0, 0, 0.56)
+  z-index: 10
+  .modal 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    min-width: 380px
+    background-color: #f2f2f2
+    padding: 38px 42px 40px 37px
+    font-family: 'Poppins'
+    .error 
+      border: 1px solid red  
+    label.error
+      border: none
+      text-align: center
+      margin: 0
+  
+    &_close 
+      position: absolute
+      top: 8px
+      right: 8px
+      font-size: 40px
+      line-height: 20px
+      color:  #0d0d0d
+      cursor: pointer
+    &_subtitle 
+      font-size: 20px
+      line-height: 20px
+      font-weight: 500
+      color: #0d0d0d
+      text-align: center
+    &_descr 
+      font-size: 15px
+      line-height: 15px
+      font-weight: 500
+      color: #0d0d0d
+      margin-top: 11px
+      text-align: center
+
+#thanks, #order
+  display: none
+
+.feed-form 
+  margin-top: 36px
+  display: flex
+  flex-direction: column
+  max-width: 100%
+  input 
+    height: 50px
+    background-color: #ffffff
+    border-radius: 5px
+    margin-top: 15px
+    border: none
+    outline: none
+    padding: 0 20px
+    font-size: 14px
+    font-weight: 300
+    color: #4b4b4b
+  &_mt25 
+    margin-top: 25px
+
+.pageup
+  display: none
+  position: fixed
+  bottom: 15px
+  right: 15px
+  width: 39px
+  height: 39px
+  img 
+    width: 100%
+  
+
