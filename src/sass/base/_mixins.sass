@@ -1,0 +1,15 @@
+@mixin bgc_black_rgba
+  background-color: rgba(0, 0, 0, 0.6)
+
+@mixin bgi_birch
+  background-image: linear-gradient(to top, $birch-color 0%, $sbirch-color 100%)
+
+=btn_hover
+  &:hover
+    background-image: none
+    background-color: $birch-color
+
+=link_hover
+  &:hover
+    color: none 
+    color: #ff5656

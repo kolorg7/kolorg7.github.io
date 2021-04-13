@@ -1,0 +1,313 @@
+@media screen and ( max-width: 1200px)
+	.menu
+		&_item
+			padding-right: 20px
+		&_link
+			font-size: 13px
+	.promo
+		&_header
+			font-size: 50px
+	.reasons
+		&_block
+			align-items: flex-start
+		&_descr
+			width: 300px
+
+@media screen and ( max-width: 991px)
+	.menu
+		&_item
+			padding-right: 8px
+		&_link
+			font-size: 10px
+	.subheader
+		&_logo
+			img
+				width: 100%
+		&_official
+			font-size: 11px
+		&_phone
+			font-size: 18px
+		&_btn
+			margin-top: 21px
+			height: 40px
+			width: 100%
+	.promo
+		&_header
+			font-size: 40px
+		&_subheader
+			font-size: 30px
+	.reasons
+		.title
+			font-size: 36px
+		&_block
+			flex-direction: column
+			align-items: center
+		&_round
+			margin-right: 0
+		&_descr
+			width: 300px
+			margin-top: 20px
+		.subtitle
+			font-size: 14px
+		&_item
+			width: 221px
+			height: 211px
+			&_subtitle
+				font-size: 18px
+			&_plus
+				bottom: 22px
+	.finish
+		&_app
+			right: 20px
+			width: 250px
+		&_social
+			left: 20px
+			top: 46px
+
+@media screen and ( max-width: 767px)
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: 100%
+		width: 50%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0, 0, 0, .6)
+		transition: 0.6s
+		&_active
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin-top: 10px 
+		&_link
+			font-size: 20px
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 2px
+			transition: 0.5s all
+		&_active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+	.xs-hidden
+		display: none
+	.xs-visible
+		display: block
+	.subheader
+		&_phone
+			display: block
+			margin-top: 10px
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			color: #ffffff
+			text-align: center
+		&_btn
+			display: block
+			width: 200px
+			height: 40px
+			margin: 0 auto
+			margin-top: 10px
+	.promo
+		&_header
+			line-height: 45px
+	.reasons
+		padding: 25px 0 50px 0
+		.title
+			font-size: 27px
+	.mobile
+		padding: 25px 0 43px 0
+		.title
+			font-size: 31px
+		&_item
+			width: 290px
+			height: 254px
+			&_subtitle
+				font-size: 18px
+	.auto	
+		.title, .subtitle
+			display: none
+		&_picture
+			margin-top: 35px
+			color: $white-color
+			img
+				width: 440px
+		&_descr
+			color: $white-color
+		&_bgup
+			min-height: 465px
+			padding-top: 25px
+		&_bgdown
+			display: none
+	.require
+		padding: 25px 0 26px 0
+		&_list
+			padding-left: 32px
+	.world
+		padding: 25px 0 30px 0
+	.finish
+		&_app
+			position: static
+			display: block
+			margin: 20px auto
+		&_social
+			position: static
+			display: block
+			text-align: center
+			a
+				display: inline-block
+				padding: 0 9px
+		&_rus
+			margin: 19px 0 20px 0
+	.reasons
+		&_descr
+			width: 200px
+		
+@media screen and ( max-width: 575px)
+	nav
+		height: 30px
+	.subheader
+		height: 70px
+		top: 30px
+		&_official
+			display: none
+		&_logo
+			margin-top: 20px
+		&_phone
+			font-size: 12px
+			font-weight: 400
+			text-transform: uppercase
+			margin-top: 11px
+		&_btn
+			margin-top: 7px
+			width: 116px
+			height: 28px
+			font-size: 9px
+			&:hover
+				@include bgi_birch
+	.promo
+		min-height: 400px
+		padding: 93px 0 35px 0
+		margin-top: -20px 
+		&_header
+			font-size: 30px
+			padding: 0 24px
+			line-height: 35px
+		&_subheader
+			font-size: 20px
+			font-weight: 700
+			margin-top: 33px
+			padding: 0 10px
+			line-height: 30px
+		&_descr
+			display: none
+		&_btn
+			width: 216px
+			height: 56px
+			margin-top: 72px
+			&:hover
+				@include bgi_birch
+	.menu
+		width: 85%
+		&_item
+			width: 100%
+			text-align: center
+		&_link
+			display: block
+			padding: 5px 0
+	.reasons
+		padding: 22px 0 36px 0
+		.title
+			font-size: 16px
+		&_block
+			margin-top: 26px
+		&_round
+			width: 100px
+			height: 100px
+		&_descr
+			width: 100%
+			margin-top: 25px
+			font-size: 15px
+		&_subtitle
+			font-size: 16px
+	.mobile
+		.title
+			font-size: 16px
+		.subtitle
+			font-size: 14px
+		&_item
+			&_plus
+				&:hover
+        			&:before, &:after
+          				background-color: $birch-color
+	.auto	
+		&_picture
+			img
+				width: 296px
+		&_bgup
+			min-height: 375px
+	.require
+		.title
+			font-size: 16px
+			margin-top: 15px
+		&_title
+			font-size: 16px
+		&_list
+			li
+				font-size: 14px
+		&_descr
+			font-size: 14px
+	.world
+		min-height: 360px
+		.title
+			font-size: 16px
+		.subtitle
+			font-size: 14px
+		&_link
+			font-size: 12px
+			&:hover
+				color: $birch-color
+	.finish
+		&_line
+			margin: 25px auto 22px auto
+		&_link
+			margin-left: 16px
+			font-size: 14px
+			&:hover
+				color: none 
+				color: $black-color
+		&_link
+			&_2
+				&:hover
+					color: none 
+					color: $black-color
+		&_rus
+			&:hover
+				color: none 
+				color: $birch-color
+		&_round
+			&:hover
+				color: none 
+				background-color: $black-color
+
+	
