@@ -79,7 +79,7 @@ $(document).ready(function(){
         return false;
     });
 
-    $("a[href=#start], a[href=#require]").click(function(){
+    $("a[href=#start], a[href=#require], a[href=#footer]").click(function(){
         const _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;

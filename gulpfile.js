@@ -3,6 +3,7 @@ const browserSync = require('browser-sync');
 const sass        = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const jsmin = require('gulp-jsmin');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
@@ -51,6 +52,7 @@ gulp.task('fonts', function () {
 
 gulp.task('scripts', function () {
     return gulp.src("src/js/**/*.js")
+        .pipe(jsmin())
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 });
