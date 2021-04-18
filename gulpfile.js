@@ -29,10 +29,19 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('script', function () {
+    return gulp.src("src/js/script.js")
+        .pipe(jsmin())
+        .pipe(rename({suffix: '.min', prefix: ''}))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
+    gulp.watch("src/js/script.js", gulp.parallel('script'));
     gulp.watch("src/*.html").on('change', gulp.parallel('html'));
-    gulp.watch("src/js/**/*.js").on('change', gulp.parallel('scripts'));
+    gulp.watch("src/js/**/*.min.js").on('change', gulp.parallel('scripts-min'));
     gulp.watch("src/fonts/**/*").on('all', gulp.parallel('fonts'));
     gulp.watch("src/icons/**/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
@@ -44,16 +53,15 @@ gulp.task('html', function () {
         .pipe(gulp.dest("dist/"));
 });
 
-gulp.task('fonts', function () {
-    return gulp.src("src/fonts/**/*")
-        .pipe(gulp.dest("dist/fonts"))
+gulp.task('scripts-min', function () {
+    return gulp.src("src/js/**/*.min.js")
+        .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function () {
-    return gulp.src("src/js/**/*.js")
-        .pipe(jsmin())
-        .pipe(gulp.dest("dist/js"))
+gulp.task('fonts', function () {
+    return gulp.src("src/fonts/**/*")
+        .pipe(gulp.dest("dist/fonts"))
         .pipe(browserSync.stream());
 });
 
@@ -76,4 +84,4 @@ gulp.task('mailer', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'mailer'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts-min', 'script', 'fonts', 'icons', 'html', 'images', 'mailer'));
